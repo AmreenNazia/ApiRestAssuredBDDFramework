@@ -1,0 +1,50 @@
+{
+  "users": [
+  {
+      "firstName": "Amreen",
+      "lastName": "Syed",
+      "subjectId": 1,
+      "id": "1"
+    },
+    {
+      "firstName": "Henry",
+      "lastName": "Ford",
+      "subjectId": 2,
+      "id": "2"
+    },
+    {
+      "firstName": "Graham",
+      "lastName": "Bell",
+      "subjectId": 1,
+      "id": "3"
+    },
+    {
+      "id": "b692",
+      "firstName": "Nazia",
+      "lastName": "Jamal",
+      "subjectId": "2"
+    },
+    {
+      "id": "7c10",
+      "firstName": "Nazia",
+      "lastName": "Jamal",
+      "subjectId": "2"
+    },
+    {
+      "id": "f3b9",
+      "firstName": "Nazia",
+      "lastName": "Jamal",
+      "subjectId": "2"
+    }
+  ],
+  "subjects": [
+    {
+      "name": "Automation",
+      "id": "1"
+    },
+    {
+      "name": "DevOps",
+      "id": "2"
+    }
+  ]
+}

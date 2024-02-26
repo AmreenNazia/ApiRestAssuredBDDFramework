@@ -9,9 +9,12 @@ import io.cucumber.testng.CucumberOptions;
                  glue = {"StepDefinitions"}, 
                  monochrome = true,
                  plugin = {"html:target/htmlreport.html"}
-                  
-              )
+ 
+
+              
+             )
 public class TestRunner extends AbstractTestNGCucumberTests {
+	
 	
 	   
 	 

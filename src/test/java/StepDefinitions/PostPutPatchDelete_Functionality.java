@@ -3,12 +3,18 @@ package StepDefinitions;
 import java.io.IOException;
 
 import PageClass.Commonpage;
-import PageClass.PostPutPatchDelete;
+import PageClass.DeleteTest;
+import PageClass.PatchTest;
+import PageClass.PostTest;
+import PageClass.PutTest;
 import io.cucumber.java.en.*;
 
 public class PostPutPatchDelete_Functionality {
 
-	private	PostPutPatchDelete action = new PostPutPatchDelete();
+	private	PostTest action = new PostTest();
+	private PutTest put = new PutTest();
+	private PatchTest patch = new PatchTest();
+	private DeleteTest delete = new DeleteTest();
 	
 	/* Post Validation*/
 	@Given("the valid endpoint of new user")
@@ -31,50 +37,53 @@ public class PostPutPatchDelete_Functionality {
 	/*Put Validation*/
  @Given("the valid endpoint of update user")
 public void the_valid_endpoint_of_update_user() {
-     action.updatendpoint();
+	 
+	 put.updatendpoint();
 }
 
 @When("the request put sent to update the user")
 public void the_request_put_sent_to_update_the_user() {
-     action.putrequest();
+	 
+     
+	put.putrequest();
 }
 
 @Then("validate the response of update user")
 public void validate_the_response_of_update_user() throws IOException {
-    action.validateUpdatesUser();
+    put.validateUpdatesUser();
 }
 
 /* Update the user using Patch*/
 
 @Given("the valid endpoint to update user")
 public void the_valid_endpoint_to_update_user() {
-    action.updateendpoint();
+    patch.updateendpoint();
 }
 
 @When("the request patch to update the user")
 public void the_request_patch_to_update_the_user() {
-     action.patchrequest();
+     patch.patchrequest();
 }
 
 @Then("validate the response of updated user")
 public void validate_the_response_of_updated_user() throws IOException {
-   action.validateUpdatedUser();
+   patch.validateUpdatedUser();
 }
 /*Delete the user*/
 
 @Given("the valid endpoint to Delete user")
 public void the_valid_endpoint_to_delete_user() {
-    action.Deleteuser();
+    delete.Deleteuser();
 }
 
 @When("the request to delete the user")
 public void the_request_to_delete_the_user() {
-     action.DeleteRequest();
+     delete.DeleteRequest();
 }
 
 @Then("validate the response of delete with {int}")
 public void validate_the_response_of_delete_with(Integer statuscode) throws IOException {
-     action.validateDeleteduser(statuscode);
+     delete.validateDeleteduser(statuscode);
 }
 
 }
